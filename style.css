@@ -1,0 +1,94 @@
+
+        .header, .navber, .conten, .sideber1, .sideber2, .footer{
+            border: 2px solid green;
+            background-color: azure;
+            padding: 0 10px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 20px #000;
+
+        }
+        .container{
+            padding: 50px;
+            border: 2px solid yellow;
+        }
+        .footer{
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header{
+            grid-area: header;
+        }
+        .navber{
+            grid-area: navber;
+        }
+        .conten{
+            grid-area: conten;
+        }
+        .main-sitber{
+            grid-area: main-sitber;
+        }
+        .sideber1{
+            grid-area: sideber1;
+        }
+        .sideber2{
+            grid-area: sideber2;
+        }
+        .footer{
+            grid-area: footer;
+        }
+       .con{
+            display: grid;
+            grid-template-areas: 
+            "header header header header"
+            "navber conten conten sideber1"
+            "navber conten conten sideber2"
+            "footer footer footer footer"
+            ;
+            gap: 20px;
+
+        }
+
+        body{
+            background-color: #ccc;
+        }
+
+
+        @media screen and (min-width: 576px) and (max-width: 992px){
+            .con{
+                grid-template-areas: 
+                "header header header"
+                "navber navber navber "
+                "sideber1 conten  conten" 
+                "sideber2 conten conten"
+                "footer footer  footer"
+                ;
+    
+            }
+           
+        }
+
+        @media screen and (max-width: 576px) {
+            .con{
+                grid-template-areas: 
+                "header"
+                "navber"
+                "conten" 
+                "sideber1"
+                "sideber2"
+                "footer"
+                ;
+    
+            }
+            .container{
+                padding: 30px;
+                border-radius: 5px;
+            }
+           /* .x{
+            border-radius: 10px;
+           } */
+        }
+
+
