@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><grid-flex></grid-flex></title>
+</head>
+<body>
+
+    <style>
+        .main-column{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(7, 100px) 50px 50px 50px 50px;
+            gap: 10px;
+        }
+        .container{
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 50px 150px;
+        }
+
+        .flex-column{
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 10px #000;
+        }
+       #flex-column1{
+           grid-row: span 11;
+        }
+        #flex-column20, #flex-column15{
+            grid-column: span 2;
+        }
+        #flex-column25, #flex-column26, #flex-column27, #flex-column28{
+            grid-column: span 4;
+            /* height: 20px; */
+        }
+
+        #flex-column0{
+            grid-column: span 3;
+        }
+
+        
+        @media screen  {
+            
+        }
+
+        @media screen and (max-width: 576px) {
+            
+            .container{
+                padding: 50px;
+            }
+        }
+
+    </style>
+    <div class="container">
+        <div class="main-column">
+            <div class="flex-column" id="flex-column1">1</div>
+            <div class="flex-column">2</div>
+            <div class="flex-column">3</div>
+            <div class="flex-column">4</div>
+            <div class="flex-column">5</div>
+            <div class="flex-column">6</div>
+            <div class="flex-column">7</div>
+            <div class="flex-column">8</div>
+            <div class="flex-column">9</div>
+            <div class="flex-column">10</div>
+            <div class="flex-column">11</div>
+            <div class="flex-column">12</div>
+            <div class="flex-column">13</div>
+            <div class="flex-column">14</div>
+            <div class="flex-column" id="flex-column15">15</div>
+            <div class="flex-column">16</div>
+            <div class="flex-column">17</div>
+            <div class="flex-column">18</div>
+            <div class="flex-column" id="flex-column20">19</div>
+            <div class="flex-column">20</div>
+            <div class="flex-column">21</div>
+            <div class="flex-column">22</div>
+            <div class="flex-column">23</div>
+            <div class="flex-column">24</div>
+            <div class="flex-column" id="flex-column0">0</div>
+            <div class="flex-column" id="flex-column25">25</div>
+            <div class="flex-column" id="flex-column26">26</div>
+            <div class="flex-column" id="flex-column27">27</div>
+            <div class="flex-column" id="flex-column28">28</div>
+        </div>
+    </div>
+</body>
+</html>
